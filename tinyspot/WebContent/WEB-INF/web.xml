@@ -9,10 +9,20 @@
 		<welcome-file>index.vm</welcome-file>
 	</welcome-file-list>
 
-	<servlet>
+	<!-- <servlet>
 		<servlet-name>Velocity</servlet-name>
 		<servlet-class>org.apache.velocity.tools.view.servlet.VelocityViewServlet</servlet-class>
-	</servlet>
+	</servlet> -->
+	<servlet>
+		<servlet-name>Velocity</servlet-name>  
+	    <servlet-class>  
+	        org.apache.velocity.tools.view.servlet.VelocityLayoutServlet  
+	    </servlet-class>
+	    <init-param>  
+        <param-name>org.apache.velocity.properties</param-name>  
+        <param-value>/WEB-INF/velocity.properties</param-value>  
+    </init-param>
+    </servlet>
 
 	<servlet-mapping>
 		<servlet-name>Velocity</servlet-name>

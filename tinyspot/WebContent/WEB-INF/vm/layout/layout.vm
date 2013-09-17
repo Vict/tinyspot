@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Velocity Test</h1>
+		<hr>
+			##这是一个宏
+			#macro(listMacro $list)
+    				#if($list)
+    					#foreach($item in $list)
+    						<TR ><TD >$velocityCount</TD><TD ><A href="http://my.oschina.net/VincentJiang" target="_blank">$item</A></TD></TR>
+    					#end
+    				#end
+			#end
+			##这是一个宏
+			
+			##---华丽的分割线---##
+			
+			#set( $treeList = ["pine", "oak", "maple", "redwood"])
+			<TABLE >
+				#listMacro($treeList)
+            </TABLE>
+			
+    			
+	<SCRIPT >
+    </SCRIPT>
+</body>
+</html>
